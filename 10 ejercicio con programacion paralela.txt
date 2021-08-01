@@ -1,0 +1,64 @@
+ejercicio 1:
+//Dada la siguiente función, que calcula el producto de los elementos del vector v (con reduccion)
+//pagina 71-72
+
+ejercicio 2:
+//pagina 24-25
+//Hace que cada hilo escriba un mensaje indicando su número de hilo y cuántas 
+//iteraciones ha procesado.Se muestra un solo mensaje por cada hilo.
+
+ejercicio 3:
+// Devuelve el numero de coincidencias
+// pagina 73-74
+
+ejercicio 4:
+//Calcula un máximo y su posición. Las variables compartidas pos_max y max pueden ser actualizadas
+//simultáneamente en diferentes iteraciones, por lo que se requiere exclusión
+//mutua en el acceso a ellas(construcción critical).
+//pagina 79-80
+
+ejercicio 5:
+//pagina 81-82
+//La siguiente función procesa una serie de transferencias bancarias.Cada transferencia 
+// tiene una cuenta origen, una cuenta destino y una
+//cantidad de dinero que se mueve de la cuenta origen a la cuenta destino.La
+//función actualiza la cantidad de dinero de cada cuenta(array saldos) y además
+//devuelve la cantidad máxima que se transfiere en una sola operación.
+
+ejercicio 6:
+// pagina 28
+// El cálculo tiene dos fases. En la primera se calcula la suma
+//de los cuadrados de los elementos de la matriz, en la segunda se escalan
+//los elementos de la matriz.Con dos regiones paralelas se garantiza que
+//la segunda fase no empieza antes de que haya terminado la primera, de
+//lo contrario el cálculo podría ser incorrecto.La primera fase requiere una
+//reducción sobre la variable suma.En ambos casos la variable j debe ser
+//privada.La variable factor es compartida y la calcula el hilo principal.
+
+ejercicio 7:
+//pagina 14
+//Planteamos una paralelización con dos regiones paralelas, una
+//por cada fase, ya que la segunda fase no puede empezar hasta que haya
+//terminado la primera.En la primera fase existen dependencias de datos
+//en el índice i, que pueden resolverse intercambiando los bucles y paralelizando el bucle j .La segunda 
+// fase requiere una reducción sobre la variable suma.En ambas fases tanto i como j deben
+//ser variables privadas
+
+ejercicio 8:
+//pagina 12
+//El siguiente código secuencial implementa el producto de
+//una matriz B de dimensión N × N por un vector c de dimensión N.
+
+ejercicio 9:
+//Usando dos regiones paralelas separadas ya que para comenzar
+//la segunda parte(el segundo par de bucles anidados) es necesario haber
+//completado la primera.En cada par de bucles anidados, existe una dependencia entre las iteraciones
+//del bucle exterior, por lo que no es posible
+//hacer la paralelización a ese nivel y debemos paralelizar los bucles internos,
+//aunque sepamos que habrá barreras implícitas en cada iteración.Usamos
+//una reducción sobre una variable auxiliar para acumular las sumas
+//pagina 22
+
+ejercicio 10:
+// pagina 23
+//Encontrar un numero
